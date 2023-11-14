@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <title>Lr4</title>
+</head>
+<body>
+    <div id="tabs">
+        <div class="tab whiteborder">Tab 1</div>
+        <div class="tab">Tab 2</div>
+        <div class="tab">Tab 3</div>
+        <div class="tabContent">
+            <div>Верхній лівий радіус: 
+                <input type="range" id="rtl" min="0" max="100" value="0">
+                <input type="text" id="ttl" value="0">
+            </div>
+            <div>Верхній правий радіус: 
+                <input type="range" id="rtr" min="0" max="100" value="0">
+                <input type="text" id="ttr" value="0">
+            </div>
+            <div>Нижній лівий радіус: 
+                <input type="range" id="rbl" min="0" max="100" value="0">
+                <input type="text" id="tbl" value="0">
+            </div>
+            <div>Нижній правий радіус: 
+                <input type="range" id="rbr" min="0" max="100" value="0">
+                <input type="text" id="tbr" value="0">
+            </div>
+            <code id="cssradius"></code>
+            <div class="block"></div>
+        </div>
+        <div class="tabContent">
+            <label for="lineHeightInput">Enter Line Height:</label>
+            <input type="text" id="lineHeightInput" placeholder="Enter line height value">
+            <button onclick="generateLineHeight()">Generate CSS</button>
+            <div id="resultContainer" class="result-container">
+                <p>Your CSS:</p>
+                <code id="cssResult"></code>
+            </div>
+            <div id="sampleBlock" class="sample-block">
+                <p>Sample Text</p>
+            </div>
+        </div>
+        <div class="tabContent"><h1>List Style Generator</h1>
+        <label for="listStyleType">List Style Type:</label>
+        <select id="listStyleType">
+            <option value="disc">Disc</option>
+            <option value="circle">Circle</option>
+            <option value="square">Square</option>
+            <option value="decimal">Decimal</option>
+            <option value="decimal-leading-zero">Decimal-leading-zero</option>
+            <option value="lower-roman">Lower Roman</option>
+            <option value="upper-roman">Upper Roman</option>
+            <option value="lower-alpha">Lower Alpha</option>
+            <option value="upper-alpha">Upper Alpha</option>
+        </select>
+        <label for="listStylePosition">List Style Position:</label>
+        <select id="listStylePosition">
+            <option value="inside">Inside</option>
+            <option value="outside">Outside</option>
+        </select>
+        <button onclick="generateListStyle()">Generate CSS</button>
+        <div id="resultContainer" class="result-container">
+            <p>Your CSS:</p>
+            <code id="csslist"></code>
+        </div>
+        <ul id="sampleList" class="sample-list">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+    </div>
+    </div>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/lineheigth.js"></script>
+    <script src="scripts/list.js"></script>
+</body>
+</html>
